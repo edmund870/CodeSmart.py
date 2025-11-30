@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Masterclass | Private Tuition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a modern tech look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        python: {
+                            blue: '#3776AB',
+                            yellow: '#FFD43B',
+                            dark: '#1e293b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for that "IDE" feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased selection:bg-python-blue selection:text-white">
+
+    Navigation
+    <nav class="fixed w-full z-50 top-0 glass-nav border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-white tracking-tighter">
+                        <span class="text-python-blue">&lt;</span>Code<span class="text-python-yellow">Smart.py</span><span class="text-python-blue">/&gt;</span>
+                    </span>
+                </div>
+                <!-- <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#rates" class="hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Rates</a>
+                        <a href="#resume" class="hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Credentials</a>
+                        <a href="#contact" class="bg-python-blue hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition">Start Learning</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="flex-1 text-center lg:text-left">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Master Python with <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-python-blue to-python-yellow">Real-World Expertise</span>
+            </h1>
+            <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
+                Coding is more than a subject—it’s a skill that empowers problem-solving and creativity. <br>
+                Our structured Python tuition takes students from fundamentals to applied projects, giving them the tools to think critically and build real-world solutions.
+            </p>
+            <!-- <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#rates" class="px-8 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-gray-200 transition">View Rates</a>
+                <a href="#contact" class="px-8 py-3 border border-slate-600 text-white font-bold rounded-lg hover:border-python-blue hover:text-python-blue transition">Contact Me</a>
+            </div> -->
+        </div>
+        
+        <!-- Decorative Code Block -->
+        <div class="flex-1 w-full max-w-lg">
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+                <div class="flex items-center gap-2 px-4 py-3 bg-slate-900 border-b border-slate-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-2 text-xs text-slate-500 font-mono">tutor.py</span>
+                </div>
+                <div class="p-6 font-mono text-sm text-blue-300">
+                    <p><span class="text-yellow-400">@dataclass</span><span class="text-blue-300">(slots = True)</span>:</p>
+                    <p><span class="text-purple-400">class</span> <span class="text-yellow-300">PythonTutor</span>:</p>
+                    <p class="pl-8">experience : <span class="text-green-400">str</span> = <span class="text-orange-400">"Industry Professional"</span></p>
+                    <p class="pl-8">focus : <span class="text-green-400">str</span> = [<span class="text-orange-400">"O-Levels"</span>, <span class="text-orange-400">"A-Levels"</span>, <span class="text-orange-400">"Computing"</span>]</p>
+                    <p class="pl-4 mt-2"><span class="text-purple-400">def</span> <span class="text-yellow-400">teach</span>(self, student):</p>
+                    <p class="pl-8"><span class="text-purple-400">return</span> <span class="text-green-400">"A Grade"</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials & Links (The "Developer" Credibility Section) -->
+    <section id="resume" class="py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white">Credentials</h2>
+                <p class="text-slate-400 mt-2">My work history and projects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- GitHub -->
+                <a href="https://github.com/Edmund870" target="_blank" class="group p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-python-blue transition flex flex-col items-center">
+                    <i class="fab fa-github text-4xl text-white mb-4 group-hover:text-python-blue transition"></i>
+                    <h3 class="text-xl font-bold text-white">GitHub</h3>
+                    <p class="text-slate-400 text-center mt-2 text-sm">My Projects.</p>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://sg.linkedin.com/in/edmund-chia" target="_blank" class="group p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition flex flex-col items-center">
+                    <i class="fab fa-linkedin text-4xl text-white mb-4 group-hover:text-blue-500 transition"></i>
+                    <h3 class="text-xl font-bold text-white">LinkedIn</h3>
+                    <p class="text-slate-400 text-center mt-2 text-sm">Work Experience.</p>
+                </a>
+
+                <!-- Resume -->
+                <a href="./resume.pdf" target="_blank" class="group p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-python-yellow transition flex flex-col items-center">
+                    <i class="fas fa-file-pdf text-4xl text-white mb-4 group-hover:text-python-yellow transition"></i>
+                    <h3 class="text-xl font-bold text-white">Resume</h3>
+                    <p class="text-slate-400 text-center mt-2 text-sm">My Qualifications.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition Rates (Pricing Table) -->
+    <section id="rates" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Rates</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Secondary Level -->
+                <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-slate-500 transition relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-700 px-3 py-1 rounded-bl-lg text-xs text-slate-300 uppercase font-bold">Beginner Friendly</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">1: Fundamentals</h3>
+                    <p class="text-slate-400 mb-6">Start with the fundamentals</p>
+                    <div class="text-4xl font-bold text-white mb-6">$50<span class="text-lg text-slate-500 font-normal">/hr</span></div>
+                    
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Python Syntax Mastery</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Logic & Flowcharts</li>
+                        <!-- <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> O-Level Syllabus Coverage</li> -->
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Data Types & Functions</li>
+                    </ul>
+                    <!-- <a href="#contact" class="block w-full py-3 bg-slate-700 hover:bg-slate-600 text-center text-white rounded-lg font-bold transition">Book Trial</a> -->
+                </div>
+
+                <!-- JC / Advanced Level -->
+                <div class="bg-slate-900 rounded-2xl p-8 border-2 border-python-blue shadow-xl shadow-blue-900/20 relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-python-blue px-3 py-1 rounded-bl-lg text-xs text-white uppercase font-bold">Most Popular</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">2: Applied/Intermediate</h3>
+                    <p class="text-slate-400 mb-6">Applied Computing & Data Science</p>
+                    <div class="text-4xl font-bold text-white mb-6">$70<span class="text-lg text-slate-500 font-normal">/hr</span></div>
+                    
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center"><i class="fas fa-check text-python-blue mr-3"></i> Data Analysis (Pandas / Polars / Numpy)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-python-blue mr-3"></i> Object-Oriented Programming</li>
+                        <li class="flex items-center"><i class="fas fa-check text-python-blue mr-3"></i> Real World Applications</li>
+                    </ul>
+                    <!-- <a href="#contact" class="block w-full py-3 bg-python-blue hover:bg-blue-600 text-center text-white rounded-lg font-bold transition">Book Trial</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-slate-950 py-12 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">Start coding now!</h2>
+            <p class="text-slate-400 mb-8">
+                Contact me by email or message to discuss.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <a href="mailto:edmund870@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 text-slate-900 rounded-lg font-bold hover:bg-white transition max-w-xs">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://t.me/edmund870" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 text-slate-900 rounded-lg font-bold hover:bg-white transition max-w-xs">
+                    <i class="fab fa-telegram"></i>
+                    Telegram
+                </a>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-slate-900 flex justify-center gap-6 text-slate-500">
+                <a href="https://github.com/Edmund870" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://sg.linkedin.com/in/edmund-chia" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/edmund870" class="hover:text-white transition"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p class="text-slate-600 text-sm mt-4">&copy; 2025 Edmund. Built with Python love.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
